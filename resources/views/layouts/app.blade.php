@@ -35,14 +35,17 @@
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-900 text-gray-200">
-<div class="min-h-screen bg-gray-900">
+<div class="min-h-screen">
     <nav x-data="{ open: false }" class="bg-gray-800 border-b border-gray-700 shadow-lg relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="shrink-0 flex items-center">
                         <a href="{{ route('dashboard') }}" class="flex items-center space-x-2">
-                            <span class="font-poppins text-xl font-bold text-white text-pink-500-glow">Jornada do Casamento</span>
+                            <svg class="h-8 w-8 text-pink-500 text-pink-500-glow animate-pulse" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.924a1 1 0 11-1.416-1.416 5.002 5.002 0 00-7.072 0 1 1 0 01-1.416 1.416 7.002 7.002 0 019.904 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="font-poppins text-xl font-bold text-white text-pink-500-glow">FestiveTunes</span>
                         </a>
                     </div>
 
@@ -85,12 +88,11 @@
                         </x-slot>
                     </x-dropdown>
                 </div>
-
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path :class="{'hidden': open, 'inline-flex': open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            <path :class="{'hidden': ! open, 'inline-flex': ! open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
@@ -140,7 +142,9 @@
     @endif
 
     <main>
-        {{ $slot }}
+        <div class="bg-gray-900">
+            {{ $slot }}
+        </div>
     </main>
 </div>
 </body>

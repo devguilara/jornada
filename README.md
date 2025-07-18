@@ -1,61 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Jornada do Casamento
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-8BC0C6?style=for-the-badge&logo=alpine.js&logoColor=white)
 
-## About Laravel
+## 🎵 Sobre o Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Jornada do Casamento** é uma aplicação web moderna, projetada para ser a companheira digital de casais em todas as etapas do planejamento do seu grande dia. Atualmente, o projeto foca na funcionalidade de **Playlists Musicais**, oferecendo uma maneira intuitiva e elegante de organizar a trilha sonora perfeita para cada momento da celebração.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Com um design exclusivo e uma interface de usuário "cool" e festiva, a aplicação é a base para futuras expansões, como galerias de inspiração e áreas de anotações, tornando-se a plataforma ideal para gerenciar todos os aspectos do casamento.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✨ Funcionalidades Atuais
 
-## Learning Laravel
+- **Criação e Edição de Playlists:** Crie playlists personalizadas com nome e descrição.
+- **Gerenciamento de Músicas:** Adicione, edite e exclua músicas facilmente.
+- **Organização por Etapas:** Classifique cada música em categorias como `Cerimônia`, `Coquetel`, `Jantar` e `Festa`.
+- **Links para Músicas:** Salve links do YouTube, Spotify ou outras plataformas para acesso rápido.
+- **Design Exclusivo:** Interface de usuário moderna e totalmente responsiva, com tema escuro e elementos neomórficos.
+- **Autenticação Segura:** Telas de login e registro estilizadas, garantindo acesso seguro ao seu planejador.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Tecnologias
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+O projeto foi construído sobre uma base sólida e moderna, utilizando:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Back-end:** [Laravel](https://laravel.com/) (versão 10+)
+- **Front-end:** [Blade](https://laravel.com/docs/master/blade), [Tailwind CSS](https://tailwindcss.com/) (com Vite) e [Alpine.js](https://alpinejs.dev/)
+- **Banco de Dados:** SQLite (padrão do `.env.example`, pode ser alterado para MySQL, PostgreSQL, etc.)
+- **Ambiente de Desenvolvimento:** [Node.js](https://nodejs.org/) e [Composer](https://getcomposer.org/)
 
-## Laravel Sponsors
+## ⚙️ Instalação e Execução
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Siga os passos abaixo para configurar e rodar o projeto localmente.
 
-### Premium Partners
+### Requisitos
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- PHP >= 8.1
+- Composer
+- Node.js & NPM
 
-## Contributing
+### Passo a Passo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+   cd seu-repositorio
+    ```
 
-## Code of Conduct
+2. **Instale as dependências do Composer:**
+    ```bash
+   composer install
+   ```  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. **Copie o arquivo de ambiente e gere a chave:**
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+   ``` 
+4. **Instale as dependências do NPM:**
+    ```bash
+   npm install
+   ```
 
-## Security Vulnerabilities
+5. **Execute as migrações do banco de dados:**
+    ```bash
+      php artisan migrate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Inicie o servidor de desenvolvimento e o compilador de assets:**
+Abra dois terminais separados.
 
-## License
+Terminal 1 (para o servidor Laravel):
+   ```bash
+       php artisan serve
+   ```
+Terminal 2 (para o compilador do Tailwind e Alpine):
+   ```bash
+       php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. **Acesse a aplicação:** 
+Abra seu navegador e acesse a URL que o php artisan serve fornecer (geralmente http://127.0.0.1:8000).
+
+## 🎨 Design e Estilo
+A interface da Jornada do Casamento foi totalmente customizada com o Tailwind CSS. As escolhas de design incluem:
+
+Tema Escuro: Uma paleta de cores baseada em tons de cinza escuro (#1e1e1e, #2a2a2a) para uma aparência sofisticada.
+
+Neumorfismo: Efeitos de sombra sutis que criam a sensação de que os elementos "saltam" ou "afundam" na tela.
+
+Cores de Destaque: Uso de rosa (pink-500) e azul (blue-400) vibrantes para botões, ícones e links, injetando energia na interface.
+
+Tipografia: Combinação das fontes Poppins (para títulos) e Inter (para o corpo do texto), o que equilibra um visual moderno com legibilidade.
+
+## 👨‍💻 Autor
+[Guilherme Lara](https://github.com/devguilara)
+
+## 📄 Licença
+Este projeto é de código aberto e está licenciado sob a Licença MIT.
