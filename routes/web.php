@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PlaylistController;
 
@@ -22,9 +23,10 @@ Route::middleware('auth')->group(function () {
 Route::resource('playlists', PlaylistController::class);
 
 
-// Rotas para as músicas, aninhadas em playlists
 Route::post('/playlists/{playlist}/songs', [PlaylistController::class, 'storeSong'])->name('playlists.songs.store');
 Route::get('/playlists/{playlist}/songs/{song}/edit', [PlaylistController::class, 'editSong'])->name('playlists.songs.edit');
 Route::put('/playlists/{playlist}/songs/{song}', [PlaylistController::class, 'updateSong'])->name('playlists.songs.update');
 Route::delete('/playlists/{playlist}/songs/{song}', [PlaylistController::class, 'destroySong'])->name('playlists.songs.destroy');
 require __DIR__.'/auth.php';
+
+Route::resource('gallery', GalleryController::class);

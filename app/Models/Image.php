@@ -5,24 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Playlist extends Model
+class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 
-        'name',
-        'description',
+    protected $fillable = [
         'user_id',
-        //'project_id',
+        'title',
+        'description',
+        'filename',
+        'filepath',
+        'category',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-    
-    public function songs()
-    {
-        return $this->hasMany(Song::class);
     }
 }

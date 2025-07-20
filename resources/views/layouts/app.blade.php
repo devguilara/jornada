@@ -41,11 +41,11 @@
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="shrink-0 flex items-center">
-                        <a href="{{ route('dashboard') }}" class="flex items-center space-x-2">
-                            <svg class="h-8 w-8 text-pink-500 text-pink-500-glow animate-pulse" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.924a1 1 0 11-1.416-1.416 5.002 5.002 0 00-7.072 0 1 1 0 01-1.416 1.416 7.002 7.002 0 019.904 0z" clip-rule="evenodd"></path>
+                        <a href="{{ url('/') }}" class="flex items-center space-x-2">
+                            <svg class="h-8 w-8 text-pink-500 text-pink-500-glow" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L14.414 5A2 2 0 0115 6.414V20a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 2h6v2H6V6zm0 4h6v2H6V10zm0 4h6v2H6v-2z" clip-rule="evenodd" />
                             </svg>
-                            <span class="font-poppins text-xl font-bold text-white text-pink-500-glow">FestiveTunes</span>
+                            <span class="font-poppins text-2xl font-bold text-white text-pink-500-glow">Jornada do Casamento</span>
                         </a>
                     </div>
 
