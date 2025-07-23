@@ -40,7 +40,7 @@
                     </a>
 
                     {{-- Card: Área de Anotações (Em Breve) --}}
-                    <div class="p-6 bg-gray-800 border border-gray-700 rounded-2xl shadow-md-light cursor-not-allowed opacity-60">
+                    <a href="{{ route('notes.index') }}" class="block p-6 bg-gray-800 border border-gray-700 rounded-2xl shadow-md-light hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 group">
                         <div class="flex items-center justify-center mb-4">
                             <svg class="h-12 w-12 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm12 2H4v8h12V6zm-2 2h-2v2h2V8zm-2 0h-2v2h2V8zm-2 0h-2v2h2V8z" clip-rule="evenodd"></path>
@@ -48,9 +48,7 @@
                         </div>
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300 font-poppins">Área de Anotações</h5>
                         <p class="font-normal text-gray-500">Mantenha todas as suas anotações sobre fornecedores, orçamentos e cronogramas em um só lugar.</p>
-                        <span class="text-sm text-green-300 mt-3 block font-bold animate-pulse">Em breve...</span>
-                    </div>
-
+                    </a>
                 </div>
             </div>
         </div>

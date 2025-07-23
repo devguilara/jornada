@@ -30,3 +30,5 @@ Route::delete('/playlists/{playlist}/songs/{song}', [PlaylistController::class, 
 require __DIR__.'/auth.php';
 
 Route::resource('gallery', GalleryController::class);
+
+Route::resource('notes', \App\Http\Controllers\NoteController::class);

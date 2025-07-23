@@ -60,6 +60,19 @@
                                            {{ request()->routeIs('playlists.index') ? 'text-pink-400' : 'text-gray-300 hover:text-white hover:border-pink-500-glow' }}">
                             {{ __('Playlists') }}
                         </x-nav-link>
+
+                        <x-nav-link :href="route('gallery.index')" :active="request()->routeIs('gallery.index')"
+                                    class="relative px-4 py-2 border-b-2 border-transparent transition duration-300 ease-in-out bg-gray-800 rounded-md
+                                           {{ request()->routeIs('gallery.index') ? 'text-pink-400' : 'text-gray-300 hover:text-white hover:border-pink-500-glow' }}">
+                            {{ __('Galeria') }}
+                        </x-nav-link>
+
+
+                        <x-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.index')"
+                                    class="relative px-4 py-2 border-b-2 border-transparent transition duration-300 ease-in-out bg-gray-800 rounded-md
+                                           {{ request()->routeIs('notes.index') ? 'text-pink-400' : 'text-gray-300 hover:text-white hover:border-pink-500-glow' }}">
+                            {{ __('Notas') }}
+                        </x-nav-link>
                     </div>
                 </div>
 
