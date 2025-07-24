@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Jornada do Casamento') }}</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- Estilos Customizados (Removido o glow) -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -26,13 +29,13 @@
         .shadow-md-light {
             box-shadow: 5px 5px 10px #1e1e1e, -5px -5px 10px #2a2a2a;
         }
-        .text-pink-500-glow {
-            text-shadow: 0 0 8px rgba(236, 72, 153, 0.7), 0 0 15px rgba(236, 72, 153, 0.4);
-        }
     </style>
 </head>
 <body class="font-sans antialiased bg-gray-900 text-gray-200">
+<div class="min-h-screen flex flex-col sm:justify-center items-center py-6 sm:py-0">
+    <div class="w-full sm:max-w-md px-6 py-4 bg-gray-800 shadow-md-light overflow-hidden sm:rounded-3xl">
         {{ $slot }}
+    </div>
 </div>
 </body>
 </html>

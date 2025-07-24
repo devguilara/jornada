@@ -35,7 +35,7 @@ class PlaylistController extends Controller
     public function show(Playlist $playlist)
     {
         if($playlist->user_id !== Auth::id()){
-            return redirect()->route('playlists.index');
+            abort(403);
         }
         $songs = $playlist->songs()->orderBy('stage')->orderBy('order')->get();
 
